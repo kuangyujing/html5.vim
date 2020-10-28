@@ -662,7 +662,7 @@ func! s:CSSIndent()
       if !cur_hasfield && (prev_hasfield || prev_unfinished)
         " Continuation line has extra indent if the previous line was not a
         " continuation line.
-        let extra = shiftwidth()
+        let extra = indent()
         " Align with @if
         if prev_text =~ '^\s*@if '
           let extra = 4
